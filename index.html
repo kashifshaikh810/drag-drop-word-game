@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .drag-container,
+      .drop-container {
+        display: flex;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      main {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .drop-container {
+        margin-top: 10px;
+      }
+
+      .drag-container div,
+      .drop-container div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+        font-size: 50px;
+        width: 120px;
+        height: 120px;
+        background-color: #4f85db;
+        margin-right: 4px;
+      }
+
+      .dragging {
+        opacity: 0.2;
+      }
+
+      .drag-select {
+        border: 2px dashed orange;
+      }
+
+      .notification{
+          background: #4fdbba;
+          height: 50px;
+          width: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+        /* flex  */
+          display: none;
+          justify-content: center;
+          align-items: center;
+          font-family: "Montserrat", sans-serif;
+          color: white;
+          font-size: 25px;
+      }
+
+      .container{
+          background-color: rgb(223, 220, 215);
+      }
+
+      .heading{
+          font-size: 30px;
+          justify-content: center;
+          align-items: center;
+          color: rgb(168, 78, 78);
+          height: 10vh;
+          font-family: "Montserrat", sans-serif;
+      }
+
+    </style>
+  </head>
+  <body>
+      
+      <div class="container">
+          <div class="notification">You won</div>
+          
+          
+          <main>
+              <div class="heading">Drag & Drop | Month names</div>
+            <section class="drag-container"></section>
+            
+            <section class="drop-container"></section>
+        </main>
+    </div>
+        
+    <script src="index.js"></script>
+  </body>
+</html>
